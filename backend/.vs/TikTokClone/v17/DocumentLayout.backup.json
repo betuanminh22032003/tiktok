@@ -1,0 +1,130 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2C11FA3-D390-4C1D-BF7B-2593A1F6EFEE}|src\\NotificationService\\NotificationService.csproj|c:\\users\\admin\\desktop\\code\\nextjs\\tiktok\\tiktok-clone\\backend\\src\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2C11FA3-D390-4C1D-BF7B-2593A1F6EFEE}|src\\NotificationService\\NotificationService.csproj|solutionrelative:src\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90CF3B54-D20E-4892-B13D-491FED82B664}|src\\ApiGateway\\ApiGateway.csproj|c:\\users\\admin\\desktop\\code\\nextjs\\tiktok\\tiktok-clone\\backend\\src\\apigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{90CF3B54-D20E-4892-B13D-491FED82B664}|src\\ApiGateway\\ApiGateway.csproj|solutionrelative:src\\apigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90CF3B54-D20E-4892-B13D-491FED82B664}|src\\ApiGateway\\ApiGateway.csproj|c:\\users\\admin\\desktop\\code\\nextjs\\tiktok\\tiktok-clone\\backend\\src\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90CF3B54-D20E-4892-B13D-491FED82B664}|src\\ApiGateway\\ApiGateway.csproj|solutionrelative:src\\apigateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90CF3B54-D20E-4892-B13D-491FED82B664}|src\\ApiGateway\\ApiGateway.csproj|c:\\users\\admin\\desktop\\code\\nextjs\\tiktok\\tiktok-clone\\backend\\src\\apigateway\\apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{90CF3B54-D20E-4892-B13D-491FED82B664}|src\\ApiGateway\\ApiGateway.csproj|solutionrelative:src\\apigateway\\apigateway.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\NotificationService\\Program.cs",
+              "RelativeDocumentMoniker": "src\\NotificationService\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\NotificationService\\Program.cs",
+              "RelativeToolTip": "src\\NotificationService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T16:07:56.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\ApiGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "src\\ApiGateway\\ocelot.json",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\ApiGateway\\ocelot.json",
+              "RelativeToolTip": "src\\ApiGateway\\ocelot.json",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-07T15:23:22.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\ApiGateway\\Program.cs",
+              "RelativeDocumentMoniker": "src\\ApiGateway\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\ApiGateway\\Program.cs",
+              "RelativeToolTip": "src\\ApiGateway\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T15:22:05.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApiGateway.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\ApiGateway\\ApiGateway.csproj",
+              "RelativeDocumentMoniker": "src\\ApiGateway\\ApiGateway.csproj",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\ApiGateway\\ApiGateway.csproj",
+              "RelativeToolTip": "src\\ApiGateway\\ApiGateway.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-07T15:19:20.885Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 185,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 656,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

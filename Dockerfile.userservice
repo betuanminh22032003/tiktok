@@ -1,0 +1,23 @@
+# Use the official .NET SDK image to build the application
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY backend/src/UserService/*.csproj ./backend/src/UserService/
+RUN dotnet restore backend/src/UserService/UserService.csproj
+
+# Copy everything else and build
+COPY . .
+WORKDIR /app/backend/src/UserService
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:9.0
+WORKDIR /app
+COPY --from=build /app/backend/src/UserService/out .
+
+# Create a non-root user
+RUN adduser --system --group appuser
+USER appuser
+
+ENTRYPOINT ["dotnet", "UserService.dll"]
