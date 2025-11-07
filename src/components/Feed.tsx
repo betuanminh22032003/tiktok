@@ -23,7 +23,7 @@ const Feed = () => {
   return (
     <div className="h-screen w-full snap-y snap-mandatory overflow-y-scroll">
       {videos.map((video) => (
-        <VideoPlayer key={video.id} src={video.src} poster={video.poster} />
+        <VideoPlayer key={video.id} id={video.id.toString()} src={video.src} poster={video.poster} />
       ))}
     </div>
   );

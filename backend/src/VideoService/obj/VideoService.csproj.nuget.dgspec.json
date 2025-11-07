@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\VideoService.csproj": {}
+    "c:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\VideoService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\VideoService.csproj": {
+    "c:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\VideoService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\VideoService.csproj",
+        "projectUniqueName": "c:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\VideoService.csproj",
         "projectName": "VideoService",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\VideoService.csproj",
+        "projectPath": "c:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\VideoService.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\obj\\",
+        "outputPath": "c:\\Users\\Admin\\Desktop\\Code\\NextJs\\tiktok\\tiktok-clone\\backend\\src\\VideoService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
