@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{32
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{ABD392E9-91AD-4490-89F8-A65F399DBB64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Web", "Identity.Web\Identity.Web.csproj", "{87887B92-B621-4565-B812-6A5D11F2A3DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Web", "Services\Identity\src\Identity.Web\Identity.Web.csproj", "{87887B92-B621-4565-B812-6A5D11F2A3DC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interaction", "Interaction", "{C3A338F8-55F6-4CBD-9697-2DB5A398C554}"
 EndProject
@@ -17,19 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{E0711002-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Video", "Video", "{A5D3B098-E651-4696-A791-D1E00712A986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interaction.Web", "Interaction.Web\Interaction.Web.csproj", "{C73D8B91-4241-4C73-8B03-439A25F0CC8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interaction.Web", "Services\Interaction\Interaction.Web\Interaction.Web.csproj", "{C73D8B91-4241-4C73-8B03-439A25F0CC8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User.Web", "User.Web\User.Web.csproj", "{162D5DC4-266C-4665-96B8-BF56615E7F0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User.Web", "Services\User\User.Web\User.Web.csproj", "{162D5DC4-266C-4665-96B8-BF56615E7F0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video.Web", "Video.Web\Video.Web.csproj", "{3B111CB9-93C4-4964-AA81-27ED706F7C44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video.Web", "Services\Video\Video.Web\Video.Web.csproj", "{3B111CB9-93C4-4964-AA81-27ED706F7C44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway.Web", "APIGateway.Web\APIGateway.Web.csproj", "{F808B75F-A62F-4823-9F92-CB931E6CAF16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway.Web", "Gateway\APIGateway.Web\APIGateway.Web.csproj", "{F808B75F-A62F-4823-9F92-CB931E6CAF16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application", "Identity.Application\Identity.Application.csproj", "{6CBF0363-EB58-47F7-B899-B1C5914A1125}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application", "Services\Identity\src\Identity.Application\Identity.Application.csproj", "{6CBF0363-EB58-47F7-B899-B1C5914A1125}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "Identity.Domain\Identity.Domain.csproj", "{FFAE74F1-C9DD-4712-AAB5-52B8B29AF082}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "Services\Identity\src\Identity.Domain\Identity.Domain.csproj", "{FFAE74F1-C9DD-4712-AAB5-52B8B29AF082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "Identity.Infrastructure\Identity.Infrastructure.csproj", "{C6F6EC20-18BA-4755-B745-055511468700}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "Services\Identity\src\Identity.Infrastructure\Identity.Infrastructure.csproj", "{C6F6EC20-18BA-4755-B745-055511468700}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{456228CE-35FC-4FE3-89B6-1246B8BD821D}"
 EndProject
