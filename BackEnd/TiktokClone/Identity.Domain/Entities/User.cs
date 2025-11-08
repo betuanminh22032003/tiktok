@@ -12,6 +12,12 @@
             Username = username;
             PasswordHash = passwordHash;
         }
+
+        public void SetRole(string role)
+        {
+            if (string.IsNullOrWhiteSpace(role)) return;
+            Role = role;
+        }
     }
 
 }
