@@ -39,3 +39,64 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+########################################
+# .NET / Visual Studio / JetBrains
+########################################
+
+# Build results
+**/bin/
+**/obj/
+
+# Visual Studio directories
+.vs/
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Dotnet publish
+**/publish/
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/
+
+# Dotnet tool folder
+.dotnet/tools/
+
+# Entity Framework
+*.db
+*.db-journal
+
+# Local app settings and secrets
+# (Do not ignore appsettings.json or appsettings.* that are committed intentionally.)
+secrets.json
+secrets.*
+
+# Logs
+logs/
+*.log
+
+# IIS Express
+/.vs/**/applicationhost.config
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code settings (ignore workspace-specific settings)
+.vscode/
+
+########################################
+# Docker
+########################################
+# Local Docker overrides
+docker-compose.override.yml
+
