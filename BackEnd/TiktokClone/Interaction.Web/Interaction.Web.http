@@ -1,0 +1,6 @@
+@Interaction.Web_HostAddress = http://localhost:5033
+
+GET {{Interaction.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
