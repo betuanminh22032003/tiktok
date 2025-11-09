@@ -1,0 +1,53 @@
+version: '3.9'
+services:
+  gateway:
+    build:
+      context: Gateway
+      dockerfile: APIGateway.Web/Dockerfile
+    container_name: gateway
+    environment:
+      # Run the gateway in Production inside Docker so it uses the container hostnames
+      # (ocelot.json). Use Development locally when running services via dotnet run.
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:7000
+      - IDENTITY_AUTHORITY=http://identity-service:5000
+    ports:
+      - "7000:7000"
+    depends_on:
+      - identity-service
+      - users-service
+      - videos-service
+
+  identity-service:
+    build:
+      context: Services/Identity/Src
+      dockerfile: Identity.Web/Dockerfile
+    container_name: identity-service
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+    expose:
+      - "5000"
+
+  users-service:
+    build:
+      context: Services/User
+      dockerfile: User.Web/Dockerfile
+    container_name: users-service
+    environment:
+      - ASPNETCORE_URLS=http://+:5001
+    expose:
+      - "5001"
+
+  videos-service:
+    build:
+      context: Services/Video
+      dockerfile: Video.Web/Dockerfile
+    container_name: videos-service
+    environment:
+      - ASPNETCORE_URLS=http://+:5002
+    expose:
+      - "5002"
+
+networks:
+  default:
+    name: tiktok-clone-network
