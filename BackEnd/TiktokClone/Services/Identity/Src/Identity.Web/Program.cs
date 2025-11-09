@@ -1,11 +1,22 @@
 using System.Text;
-using Identity.Application.Models;
-using Identity.Application.Interfaces;
-using Identity.Infrastructure.Services;
+using FluentValidation;
+using Identity.Infrastructure;
+using Identity.Infrastructure.Security;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add MediatR
+builder.Services.AddMediatR(cfg => 
+    cfg.RegisterServicesFromAssembly(typeof(Identity.Application.Commands.Register.RegisterCommand).Assembly));
+
+// Add FluentValidation
+builder.Services.AddValidatorsFromAssembly(typeof(Identity.Application.Commands.Register.RegisterCommand).Assembly);
+
+// Add Infrastructure (DbContext, Repositories, Services)
+builder.Services.AddInfrastructure(builder.Configuration);
 
 // Bind JwtSettings from configuration
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
@@ -16,12 +27,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Token service
-// Register application/infrastructure auth and role services
-builder.Services.AddScoped<Identity.Application.Interfaces.IAuthService, Identity.Infrastructure.Services.AuthService>();
-builder.Services.AddSingleton<Identity.Application.Interfaces.IRoleService, Identity.Infrastructure.Services.RoleService>();
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
 
-// Configure JWT authentication - read token from HttpOnly cookie named "access_token"
+// Configure JWT authentication
 var keyBytes = Encoding.UTF8.GetBytes(jwtSettings.Key ?? string.Empty);
 builder.Services.AddAuthentication(options =>
 {
@@ -38,13 +56,12 @@ builder.Services.AddAuthentication(options =>
             ValidIssuer = jwtSettings.Issuer,
             ValidateAudience = !string.IsNullOrEmpty(jwtSettings.Audience),
             ValidAudience = jwtSettings.Audience,
-            // Map role claim named "role" into ClaimsPrincipal.IsInRole checks
             RoleClaimType = "role",
             ValidateLifetime = true,
             ClockSkew = TimeSpan.Zero
         };
 
-        // Read token from cookie so the client doesn't need to add Authorization header
+        // Read token from Authorization header or cookie
         options.Events = new JwtBearerEvents
         {
             OnMessageReceived = context =>
@@ -68,6 +85,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();

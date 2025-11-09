@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Shared\TiktokClone.SharedKernel\TiktokClone.SharedKernel.csproj" />
+  </ItemGroup>
+
 </Project>
