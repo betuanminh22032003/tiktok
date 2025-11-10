@@ -4,6 +4,12 @@
 
 **19/19 projects build thành công** | **4 Microservices hoạt động** | **API Gateway đầy đủ** | **Production-ready code**
 
+## 📚 Documentation (quick links)
+
+- Primary docs directory: `docs/` — consolidated project documentation (backend, frontend, gateway).
+- DevOps & deployment artifacts: `devops/` — deployment guides, runbooks, and production notes.
+- Note: Originals remain in `BackEnd/` and `FrontEnd/`; files in `docs/` are copies for easier discovery.
+
 ### ✨ Những gì đã hoàn thành:
 - ✅ **Identity Service** - Đăng ký, đăng nhập, JWT authentication (BCrypt + JWT)
 - ✅ **User Service** - Profile management, Follow/Unfollow, Avatar upload

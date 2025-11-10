@@ -1,0 +1,20 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Ensure common binary formats are treated as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.tar.gz binary
+
+# Generated files
+**/bin/** export-ignore
+**/obj/** export-ignore
+**/*.user export-ignore
+**/*.suo export-ignore
+
+# Ensure markdown files are normalized
+*.md text

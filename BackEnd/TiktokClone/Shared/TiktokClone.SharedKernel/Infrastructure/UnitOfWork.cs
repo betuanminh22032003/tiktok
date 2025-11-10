@@ -23,10 +23,13 @@ public class UnitOfWork : IUnitOfWork
 
     public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
-        // Dispatch domain events before saving
+        // Persist changes first so domain event handlers observe committed state.
+        var result = await _context.SaveChangesAsync(cancellationToken);
+
+        // Dispatch domain events after successful save.
         await DispatchDomainEventsAsync(cancellationToken);
-        
-        return await _context.SaveChangesAsync(cancellationToken);
+
+        return result;
     }
 
     public async Task BeginTransactionAsync(CancellationToken cancellationToken = default)
@@ -82,11 +85,23 @@ public class UnitOfWork : IUnitOfWork
             .SelectMany(x => x.DomainEvents)
             .ToList();
 
-        entities.ForEach(entity => entity.ClearDomainEvents());
-
-        foreach (var domainEvent in domainEvents)
+        // Publish events first. Only clear them after successful publication so failed
+        // publishers can surface the error and events can be retried if desired.
+        try
         {
-            await _mediator.Publish(domainEvent, cancellationToken);
+            foreach (var domainEvent in domainEvents)
+            {
+                await _mediator.Publish(domainEvent, cancellationToken);
+            }
+
+            // Clear events after successful publish
+            entities.ForEach(entity => entity.ClearDomainEvents());
+        }
+        catch
+        {
+            // Do NOT clear domain events if publishing failed.
+            // Let exception bubble up so caller can decide retry/rollback behavior.
+            throw;
         }
     }
 

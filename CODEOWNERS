@@ -1,0 +1,14 @@
+# Default code owners for the repository
+# Each line is a file pattern followed by one or more owners.
+# Use GitHub usernames (e.g. @team-name)
+
+# Backend
+/BackEnd/ @betuanminh22032003
+/BackEnd/TiktokClone/ @betuanminh22032003
+
+# Frontend
+/FrontEnd/ @betuanminh22032003
+
+# Docs and DevOps
+/docs/ @betuanminh22032003
+/devops/ @betuanminh22032003
