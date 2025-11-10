@@ -19,10 +19,14 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore ./BackEnd/TiktokClone/TiktokClone.sln
+      run: |
+        pwd
+        dotnet restore ./BackEnd/TiktokClone/TiktokClone.sln
 
     - name: Build
-      run: dotnet build ./BackEnd/TiktokClone/TiktokClone.sln --no-restore --configuration Release
+      run: |
+        pwd
+        dotnet build ./BackEnd/TiktokClone/TiktokClone.sln --no-restore --configuration Release
 
     - name: Run tests (if any)
       run: |
