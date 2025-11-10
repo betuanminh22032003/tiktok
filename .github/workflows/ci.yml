@@ -21,11 +21,13 @@ jobs:
     - name: Restore dependencies
       run: |
         pwd
+        ls
         dotnet restore ./BackEnd/TiktokClone/TiktokClone.sln
 
     - name: Build
       run: |
         pwd
+        ls
         dotnet build ./BackEnd/TiktokClone/TiktokClone.sln --no-restore --configuration Release
 
     - name: Run tests (if any)
