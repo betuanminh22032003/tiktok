@@ -2,8 +2,16 @@
 
 A professional, production-ready TikTok clone built with modern web technologies.
 
-## 🚀 Features
+## 🚀 Features - Ready to Integrate
 
+### ✅ Backend Integration Ready
+- **Authentication**: JWT tokens from Identity Service (Port 5001)
+- **User Profiles**: Profile CRUD, Follow/Unfollow from User Service (Port 5004)
+- **Video Feed**: Infinite scroll from Video Service (Port 5002)
+- **Interactions**: Like/Unlike, Comments from Interaction Service (Port 5003)
+- **API Gateway**: Single entry point at Port 7000 with rate limiting
+
+### 🎨 Frontend Features
 - **Infinite Video Feed**: Smooth scrolling with auto-play
 - **Real-time Interactions**: Live likes, comments, and views via Socket.IO
 - **Video Upload**: Drag-and-drop with progress tracking
@@ -50,9 +58,22 @@ npm run dev
 Create a `.env.local` file:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3000
-NEXT_PUBLIC_SOCKET_URL=http://localhost:3000
+# Option 1: Use API Gateway (Recommended)
+NEXT_PUBLIC_API_URL=http://localhost:7000
+NEXT_PUBLIC_SOCKET_URL=http://localhost:7000
+
+# Option 2: Direct to services (Development only)
+NEXT_PUBLIC_IDENTITY_URL=http://localhost:5001
+NEXT_PUBLIC_VIDEO_URL=http://localhost:5002
+NEXT_PUBLIC_INTERACTION_URL=http://localhost:5003
+NEXT_PUBLIC_USER_URL=http://localhost:5004
 ```
+
+### Backend Services Must Be Running
+Ensure these are started before running frontend:
+- API Gateway: `http://localhost:7000` (or individual services on ports 5001-5004)
+- PostgreSQL databases (4 instances)
+- Redis cache
 
 ## 📁 Project Structure
 
@@ -157,18 +178,55 @@ import { cn } from '@/lib/utils';
 </div>
 ```
 
-## 📡 API Integration
+## 📡 API Integration - Connected to .NET Backend
 
-Centralized API client with interceptors:
+### Available Backend Endpoints:
+
+**Identity Service (Authentication)**
+```typescript
+POST /identity/register - Register new user
+POST /identity/login - Login and get JWT token
+GET /identity/user/{id} - Get user info
+```
+
+**Video Service**
+```typescript
+GET /videos/feed?page=1&pageSize=10 - Get video feed
+GET /videos/{id} - Get video details
+POST /videos - Upload video (requires auth)
+POST /videos/{id}/increment-view - Track view
+```
+
+**Interaction Service**
+```typescript
+POST /interactions/{videoId}/like - Like video (requires auth)
+DELETE /interactions/{videoId}/unlike - Unlike video (requires auth)
+POST /interactions/{videoId}/comment - Add comment (requires auth)
+GET /interactions/{videoId}/likes - Get likes
+GET /interactions/{videoId}/comments - Get comments
+```
+
+**User Service**
+```typescript
+POST /users/profile - Create profile (requires auth)
+GET /users/profile/{userId} - Get profile
+POST /users/follow/{userId} - Follow user (requires auth)
+GET /users/{userId}/followers - Get followers
+GET /users/{userId}/following - Get following
+```
+
+### API Client Usage:
 
 ```typescript
 import { fetchVideos, toggleLike } from '@/lib/api';
 
-// Fetch videos
+// Fetch videos from backend
 const videos = await fetchVideos(page, pageSize);
 
-// Toggle like
+// Toggle like (sends to backend)
 const result = await toggleLike(videoId);
+
+// All requests include JWT token automatically
 ```
 
 ## 🔌 Real-time Features
