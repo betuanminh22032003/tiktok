@@ -18,17 +18,25 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
+    - name: Dump .NET info and workspace (debug)
+      run: |
+        echo "--- dotnet --info ---"
+        dotnet --info
+        echo "--- dotnet --list-sdks ---"
+        dotnet --list-sdks
+        echo "--- workspace cwd and contents ---"
+        pwd
+        ls -la
+
     - name: Restore dependencies
       run: |
-        pwd
-        ls
-        dotnet restore ./BackEnd/TiktokClone/TiktokClone.sln
+        echo "Restoring solution from repository root (Linux-safe relative path)"
+        dotnet restore BackEnd/TiktokClone/TiktokClone.sln
 
     - name: Build
       run: |
-        pwd
-        ls
-        dotnet build ./BackEnd/TiktokClone/TiktokClone.sln --no-restore --configuration Release
+        echo "Building solution (no-restore)"
+        dotnet build BackEnd/TiktokClone/TiktokClone.sln --no-restore --configuration Release
 
     - name: Run tests (if any)
       run: |
